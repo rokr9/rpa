@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function show_alert(){
+			alert("PDF Validated and Forwarded to the Respective Port");
+		}
+
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <style>
+        .wrapper {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        h2 {
+            margin: 15px 0;
+            width: 100%;
+            color: #fff;
+        }
+        nav {
+            margin-bottom: 50px;
+        }
+        input.full-width {
+            width: 100%;
+        }
+        td.small-width {
+            width: 375px;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <h2 class="text-center">Robotic Process Automation</h2>
+              </nav>
+<div class="wrapper">
+        <form name = "RPA" onsubmit=show_alert()>
+
+                
+                <table name = "RPA FORM" cellspacing = "5" class="table table-borderless">
+                <tr>
+                    <td>Entity</td>
+                    <td>
+                        <select class="custom-select">
+                          <option value="NORTON LILLY INTERNATIONAL">NORTON LILLY INTERNATIONAL</option>
+                          <option value="NLI TEST">NLI TEST</option>
+                          <option value="MARINE TRANSPORT COMPANY">MARINE TRANSPORT COMPANY</option>
+                          <option value="AGRI PORT SERVICES">AGRI PORT SERVICES</option>
+                          <option value="APS CANADA">APS CANADA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Branch</td>
+                    <td>
+                        <select class="custom-select">
+                          <option value="USNYC">USNYC</option>
+                      <option value="USMSY">USMSY</option>
+                          <option value="USPIT">USPIT</option>
+                          <option value="USCA">USCA</option>
+                          <option value="USWA">USWA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Doc Type</td>
+                    <td>
+                        <select class="custom-select">
+                          <option value="VENDOR INVOICE">VENDOR INVOICE</option>
+                          <option value="AGENCY FEE SUPPORTING DOCUMENT">AGENCY FEE SUPPORTING DOCUMENT</option>
+                          <option value="APJOURNALENTRY">AP JOURNAL ENTRY</option>
+                          <option value="APPOINTMENT MESSAGE">APPOINTMENT MESSAGE</option>
+                          <option value="CTM RECEIPT">CTM RECEIPT</option>
+                          <option value="OUTWIRE VENDOR INVOICE">OUTWIRE VENDOR INVOICE</option>
+                          <option value="PORT CHECK">PORT CHECK</option>
+                          <option value="SUPPORTING DOCUMENT">SUPPORTING DOCUMENT</option>
+                          <option value="SERVICE PURCHASE ORDER">SERVICE PURCHASE ORDER</option>
+                          <option value="VISA CHARGE">VISA CHARGE</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Serial No.</td>
+                    <td><input type="text" name="serialNo" class="full-width"></td>
+                </tr>
+                <tr>
+                    <td>Vendor Name</td>
+                    <td><input type="text" name="vendorName" class="full-width"></td>
+                </tr>
+                <tr>
+                    <td>Invoice No</td>
+                    <td><input type="text" name="invoiceNo" class="full-width"></td>
+                </tr>
+                <tr>
+                    <td>Invoice Date</td>
+                    <td><input type="text" name="invoiceDate" class="full-width"></td>
+                </tr>
+                <tr>
+                    <td>Local Currency</td>
+                    <td class="small-width"><input type="text" name="localCurrency" size="4"></td>
+                    <td>Exchange Rate</td>
+                    <td><input type="text" name="exchangeRate"></td>
+                    
+                </tr>
+                <tr>
+                    <td>Invoice Currency</td>
+                    <td><input type="text" name="invoiceCurrency" size="4"></td>
+                    <td>Invoice Amount</td>
+                    <td><input type="text" name="invoiceAmount"></td>
+                    
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>
+                        <select class="custom-select">
+                          <option value="FORWARD TO PORT">FORWARD TO PORT</option>
+                          <option value="FORWARD TO SUBAGENT ACCOUTANT">FORWARD TO SUBAGENT ACCOUTANT</option>
+                          <option value="INVALID FOR PASS">INVALID FOR PASS</option>
+                          <option value="WORK IN PROGRESS - SCAN CENTER">WORK IN PROGRESS - SCAN CENTER</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Remarks</td>
+                    <td><input type="text" name="remarks"></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit" class="btn btn-primary mr-3">
+                        <input type="submit" value="Clear" class="btn btn-danger"></td>
+                <tr>
+                </table>
+                </form>
+                  
+</div>
+</body>
+</html>
