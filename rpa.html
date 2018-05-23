@@ -4,7 +4,11 @@
 <head>
     <script>
         function show_alert() {
-            alert("PDF Validated and Forwarded to the Respective Port");
+            document.getElementById('alert').style.display = 'block';
+        }
+        if (window.frames['myframe'] && !window.userSet){
+            window.userSet = true;
+            frames['myframe'].location.href='http://test.com/hello?uname='+getUserName();
         }
 
     </script>
@@ -26,9 +30,12 @@
         height: 900px;
     }
         h2 {
-            margin: 15px 0;
             width: 100%;
             color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: 200;
+            margin: 10px 0;
         }
 
         nav {
@@ -42,23 +49,29 @@
         td.small-width {
             width: 375px;
         }
+        #alert{
+            display: none;
+        }
     </style>
 </head>
 
 <body class="bg-light text-dark">
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <h2 class="text-center">Robotic Process Automation</h2>
     </nav>
-    
+    <div class="alert alert-success container mb-5 text-center" role="alert" id="alert">
+            PDF Validated and Forwarded to the Respective Port
+          </div>
     <div class="row container-fluid">
         <div class="col-6 pdf-viewer">
-                <iframe src="Invoice1.pdf" width="100%" height="100%" id="iframe">
+                <iframe src="annual_report_2009.pdf" width="100%" height="100%" id="iframe">
                     This browser does not support PDFs. Please download the PDF to view it: <a href="annual_report_2009.pdf">Download PDF</a>
                     </iframe>
                 <!-- <embed src="Polineni_resume.pdf" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html"> -->
         </div>
             <div class="col-6">
-                    <form name="RPA" onsubmit=show_alert()>
+                    <form name="RPA">
             
             
                         <table name="RPA FORM" cellspacing="5" class="table table-borderless">
@@ -171,7 +184,7 @@
                             <tr>
                                 <td></td>
                                 <td>
-                                    <input type="submit" value="Submit" class="btn btn-primary mr-3">
+                                    <button type="button" class="btn btn-primary mr-3" onclick="show_alert()">Submit</button>
                                     <input type="submit" value="Clear" class="btn btn-danger">
                                 </td>
                                 <tr>
